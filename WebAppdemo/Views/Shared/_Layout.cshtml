@@ -6,11 +6,31 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <header>
+        <h1>LOGO</h1>
+        <nav>
+            <ul>
+                <li class="menuitem">
+                    <a asp-controller="Home" asp-action="About">About</a>
+                </li>
+
+                <li class="menuitem">
+                    <a asp-controller="Home" asp-action="Contact">Contact</a>
+                </li>
+
+                <li class="menuitem">
+                    <a asp-controller="Home" asp-action="Projects">Projects</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
     <div>
         @RenderBody()
     </div>
 
 
-    <footer>@DateTime.Now.ToLongDateString()</footer>
+    <footer>Daniel Alexandre, @DateTime.Now.ToLongDateString()</footer>
 </body>
 </html>
