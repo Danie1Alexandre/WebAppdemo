@@ -11,7 +11,7 @@
         {
             string outcome;
             
-            if (temperature > 38)
+            if (temperature > 37)
                 outcome = "You have fever";
             else
                 outcome = "You do not have fever";
