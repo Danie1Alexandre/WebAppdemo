@@ -17,7 +17,6 @@ namespace WebAppdemo.Controllers
             thermometer temp = new thermometer();
 
             ViewBag.Message = temp.WriteMessage(value);
-  
 
             return View();
         }
