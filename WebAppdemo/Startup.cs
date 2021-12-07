@@ -16,6 +16,17 @@ namespace WebAppdemo
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+            
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+       
+             
             services.AddMvc();
         }
 
@@ -31,6 +42,8 @@ namespace WebAppdemo
 
             app.UseRouting();
 
+            app.UseSession();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute
@@ -38,6 +51,20 @@ namespace WebAppdemo
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                 );
+                endpoints.MapControllerRoute
+                (
+                    name: "Doctor",
+                    pattern: "FeverCheck",
+                    defaults: new { controller = "Doctor", action = "FeverCheck", }
+                );
+                endpoints.MapControllerRoute
+                (
+                    name: "Game",
+                    pattern: "GuessingGame",
+                    defaults: new { controller = "Game", action = "GuessingGame", }
+                );
+
+
 
             });
 

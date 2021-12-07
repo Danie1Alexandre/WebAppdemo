@@ -4,11 +4,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="css/StyleSheet.css" />
+
 </head>
 <body>
     <header>
         <h1>LOGO</h1>
-        <nav>
+        <nav class = "topNav">
             <ul>
                 <li class="menuitem">
                     <a asp-controller="Home" asp-action="Index">Home</a>
@@ -24,6 +26,15 @@
 
                 <li class="menuitem">
                     <a asp-controller="Home" asp-action="Projects">Projects</a>
+                </li>
+                <li class="menuitem">
+                    <a asp-controller="Doctor" asp-action="FeverCheck">Fever Check</a>
+                </li>
+                <li class="menuitem">
+                    <a asp-controller="Game" asp-action="GuessingGame">Guessing Game</a>
+                </li>
+                <li class="menuitem">
+                    <a asp-controller="People" asp-action="People">People</a>
                 </li>
             </ul>
         </nav>

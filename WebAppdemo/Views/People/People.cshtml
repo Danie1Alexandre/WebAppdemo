@@ -1,0 +1,65 @@
+﻿@model PeopleViewModel
+
+
+
+@{
+    ViewData["Title"] = "People";
+}
+
+<h1>People Index</h1>
+
+<div>
+    <form asp-action="People" method="post" role="form">
+         <h3>Search</h3>
+         <input asp-for="searchPerson" required />
+         <input type="submit"  value="search" />
+     </form>
+      <br />
+</div>
+
+<div>
+    <form asp-action="CreatePerson" method="post" role="form">
+        <div>
+            <h3><b>Add new person</b></h3>
+            <label asp-for="personName"></label>
+            <input asp-for="personName" />
+            <span style="color:rebeccapurple" asp-validation-for="personName"></span>
+            <br />
+            <label asp-for="personCity"></label>
+            <input asp-for="personCity" />
+            <span style="color:rebeccapurple" asp-validation-for="personCity"></span>
+            <br />
+            <label asp-for="personPhoneNumber"></label>
+            <input asp-for="personPhoneNumber" />
+            <span style="color:rebeccapurple" asp-validation-for="personPhoneNumber"></span>
+            <br />
+            <input type="submit"  value="Add person" />
+        </div>
+    </form>
+</div>
+
+<h3>Table of people</h3>
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Name </th>
+            <th>City  </th>
+            <th>Phone Number  </th>
+        </tr>
+    </thead>
+<tbody>
+    @foreach (var item in Model.peopleListView) 
+    {
+        <tr>
+            <td>@item.personName  </td>
+            <td>@item.personCity </td>
+            <td>@item.personPhoneNumber </td>
+           <td><a href="#" onclick="location.href =
+           '@Url.Action("DeletePerson","People", new { name = item.personName })'">Delete</a>
+           </td>
+        </tr>
+    }
+</tbody>
+</table>
+<br />
