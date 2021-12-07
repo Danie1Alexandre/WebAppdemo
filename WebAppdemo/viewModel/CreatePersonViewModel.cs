@@ -11,13 +11,13 @@ namespace WebAppdemo.viewModel
 
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Please enter city."), MaxLength(45), MinLength(3)]
-        [Display(Name = "city")]
+        [Display(Name = "City")]
         public string personCity { get; set; }
 
 
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Please enter phone nummber."), MaxLength(45), MinLength(3)]
-        [Display(Name = "phone nummber")]
+        [Display(Name = "Phone nummber")]
         public string personPhoneNumber { get; set; }
     }
 }
