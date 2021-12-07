@@ -37,6 +37,10 @@
                 <li class="menuitem">
                     <a asp-controller="People" asp-action="People">People</a>
                 </li>
+                <li class="menuitem">
+                    <a asp-controller="Ajax" asp-action="Index">JQuery with Ajax function</a>
+                </li>
+
             </ul>
         </nav>
 
@@ -48,5 +52,7 @@
 
 
     <footer>Daniel Alexandre, @DateTime.Now.ToLongDateString()</footer>
+     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src ="~/js/PersonScript.js"> </script>
 </body>
 </html>

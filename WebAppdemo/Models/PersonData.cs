@@ -41,5 +41,12 @@ namespace WebAppdemo.Models
             return findPerson;
         }
 
+        public Person Read(int id)
+        {
+            Person findPerson = listofPeople.Find(person => person.Id == id);
+            return findPerson;
+        }
+
+
     }
 }
