@@ -2,7 +2,7 @@
 
 namespace WebAppdemo.Migrations
 {
-    public partial class Seededpeople : Migration
+    public partial class uppdate2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -77,6 +77,14 @@ namespace WebAppdemo
                     defaults: new { controller = "Game", action = "GuessingGame", }
                 );
 
+                                endpoints.MapControllerRoute
+                (
+                    name: "Game",
+                    pattern: "GuessingGame",
+                    defaults: new { controller = "Game", action = "GuessingGame", }
+                );
+
+
 
 
             });

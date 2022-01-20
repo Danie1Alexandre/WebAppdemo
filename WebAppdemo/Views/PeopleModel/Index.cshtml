@@ -1,0 +1,36 @@
+﻿@model IEnumerable<PeopleModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>People from Narutos World</h1>
+
+ <a asp-action="CreatePeople">Create</a>
+
+
+
+<div class="container">
+
+    <div class = "row">
+        <div class="col-md-2">Id </div>
+        <div class="col-md-2">Name </div>
+        <div class="col-md-3">Skill  </div>
+        <div class="col-md-2">City </div>
+    </div>
+
+    @foreach (var item in Model) 
+    {
+        <div class = "row">
+            <div class="col-md-2">@item.Id  </div>
+            <div class="col-md-2">@item.Name </div>
+            <div class="col-md-3">@item.Skills </div>
+            <div class="col-md-2">@item.CityId </div>
+        </div>
+    }
+</div>
+<div class="row">
+    <a asp-controller="City" asp-action="Index">View City</a>
+    <a asp-controller="Country" asp-action="Index">View Country</a>
+</div>
+

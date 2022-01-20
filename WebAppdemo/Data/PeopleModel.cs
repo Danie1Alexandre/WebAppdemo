@@ -14,5 +14,15 @@ namespace WebAppdemo.Data
         [Required]
         public string Skills { get; set; }
 
+
+        public CityModel City { get; set; }
+        public int CityId { get; set; }
+        
+
+       
+       
+
+     
+
     }
 }

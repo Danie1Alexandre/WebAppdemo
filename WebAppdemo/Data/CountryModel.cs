@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebAppdemo.Data
 {
-    public class CityModel
+    public class CountryModel
     {
         [Key]
         public int Id { get; set; }
@@ -11,10 +11,6 @@ namespace WebAppdemo.Data
         [Required]
         public string Name { get; set; }
 
-        public List<PeopleModel> People { get; set; }
-
-
-        public CountryModel Country { get; set; }
-        public int CountryID { get; set; }
+        public List<CityModel> Cyties { get; set; }
     }
 }
