@@ -12,7 +12,7 @@ namespace WebAppdemo.Data
         public string Name { get; set; }
 
         [Required]
-        public string Skills { get; set; }
+        public string PhoneNumber { get; set; }
 
 
         public CityModel City { get; set; }

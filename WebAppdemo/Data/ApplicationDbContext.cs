@@ -27,18 +27,20 @@ namespace WebAppdemo.Data
                 .HasForeignKey(ci => ci.CountryID);
                            
 
-            modelBuilder.Entity<PeopleModel>().HasData(new PeopleModel { Id = 1, Name = "Naruto", Skills = "Shadow Clones", CityId = 1 });
-            modelBuilder.Entity<PeopleModel>().HasData(new PeopleModel { Id = 2, Name = "Sasuke", Skills = "Fireball", CityId = 1 });
-            modelBuilder.Entity<PeopleModel>().HasData(new PeopleModel { Id = 3, Name = "Gaara", Skills = "Shield of Sand", CityId = 2 });
-    
+            modelBuilder.Entity<PeopleModel>().HasData(new PeopleModel { Id = 1, Name = "Neo", PhoneNumber = "05199999", CityId = 1 });
+            modelBuilder.Entity<PeopleModel>().HasData(new PeopleModel { Id = 2, Name = "Mr.Smith", PhoneNumber = "08197777", CityId = 2 });
+            modelBuilder.Entity<PeopleModel>().HasData(new PeopleModel { Id = 3, Name = "Morpheus", PhoneNumber = "07198888", CityId = 3 });
+            modelBuilder.Entity<PeopleModel>().HasData(new PeopleModel { Id = 3, Name = "Trinity", PhoneNumber = "071234986", CityId = 4 });
 
-            modelBuilder.Entity<CityModel>().HasData(new CityModel { Id = 1, Name = "Konohagakure, Hidden In The Leaf", CountryID = 1 });
-            modelBuilder.Entity<CityModel>().HasData(new CityModel { Id = 2, Name = "Sunagakure, Hidden In The Sand", CountryID = 2 });
+            modelBuilder.Entity<CityModel>().HasData(new CityModel { Id = 1, Name = "NewYork", CountryID = 1 });
+            modelBuilder.Entity<CityModel>().HasData(new CityModel { Id = 2, Name = "LosAngeles", CountryID = 2 });
+            modelBuilder.Entity<CityModel>().HasData(new CityModel { Id = 3, Name = "Moscow", CountryID = 3 });
+            modelBuilder.Entity<CityModel>().HasData(new CityModel { Id = 4, Name = "Paris", CountryID = 4 });
 
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { Id = 1, Name = "the Land of Fire" });
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { Id = 2, Name = "the Land of Wind" });
-
-
+            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { Id = 1, Name = "Usa" });
+            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { Id = 2, Name = "Usa" });
+            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { Id = 3, Name = "Russia" });
+            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { Id = 4, Name = "France" });
         }
 
 
